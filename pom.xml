@@ -32,6 +32,47 @@
     </dependencyManagement>
     
     <dependencies>
+        <!-- =========== AJOUTS FdB ================================== -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.15.0</version>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>
+        <!-- pour rendre possible le "live reload" : mise à jour de la page
+        lorque l'on change le programme.
+        Ajoutez également 
+        vaadin.devmode.liveReload.enabled=true
+        dans src/main/resources/application.properties
+        En netbeans, assurez vous que vous avez activé le "compile on save"
+        dans les propriétés du projet.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- remplace normalement la dépendance directe à HikariCP, 
+         mais je veux garder la dépendance directe pour pouvoir configurer le pool de connexions
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        -->
+        <!-- =========== FIN AJOUTS FdB ================================== -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
