@@ -40,7 +40,7 @@ public class ConnectionPool {
     /**
      * permet de selectionner le SGBD utilisé
      */
-    public static SGBDPossibles SGBD = SGBDPossibles.H2MEMORY;
+    public static SGBDPossibles SGBD = SGBDPossibles.H2FILE;
 
     // à modifier
     public static String LOGIN_SUR_SERVEUR_M3 = "m3_fdebertranddeb01";
